@@ -1,0 +1,101 @@
+@import 'colors/theme.css';
+
+* {
+    border: none;
+    border-radius: 0px;
+
+    font-family: "Adwaita Sans", "JetBrainMono Nerd Font Propo", sans-serif;
+    /* font-weight: bold; */
+
+    font-size: 11px;
+    
+    min-height: 0;
+    padding: 1;
+    margin: 0;
+}
+
+window#waybar {
+    background:transparent;
+}
+
+tooltip {
+    background: @bg0;
+    border: 1px solid @bg3;
+}
+
+tooltip label {
+    color: @fg;
+    padding: 6px;
+}
+
+#workspaces {
+    background-color: @bg0;
+    padding: 3px 2px;
+    margin: 0 0 0 12px;
+    border-radius: 10px;
+    border: 1px solid @bg1;
+    color: @fg;
+}
+
+#workspaces button {
+    background-color: @bg0;
+    color: @fg;
+    padding: 0px 6px;
+    margin: 0px 3px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    background-color: @red;
+    color: @bg0;
+    min-width: 50px;
+    transition: all 0.3s ease-in-out;
+    font-size: 12px;
+}
+
+#workspaces button:hover {
+    background: @fg; /* Changed from background-color */
+    color: @bg0;
+    border-radius: 16px;
+    min-width: 50px;
+    background-size: 400% 400%;
+    
+    /* Optional: GTK sometimes adds weird borders or shadows on hover */
+    box-shadow: none; 
+    text-shadow: none;
+    border: none;
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+    color: @bg0;
+    border-radius: 16px;
+    min-width: 50px;
+    background-size: 400% 400%;
+    transition: all 0.3s ease-in-out;
+}
+
+#battery,
+#pulseaudio,
+#network,
+#clock,
+#custom-orbit,
+#custom-notification {
+    background-color: @bg0;
+    padding: 0 15px 0 15px;
+    margin: 0 0 0 12px;
+    border-radius: 15px;
+    border: 1px solid @bg1;
+    color: @red;
+}
+
+#custom-notification {
+    color: @orange;
+    margin: 0 14px 0 12px;
+}
+
+#temperature {
+    color: @orange;
+    margin: 0 14px 0 12px;
+}
